@@ -1,16 +1,14 @@
-import logo from "./logo.svg";
 import "./App.css";
-import TableComponent from "./table";
-import Timer from "./timer";
-import HookComponent from "./hook";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import VideoComponent from "./components/VideoComponent";
+import HomeComponent from "./components/HomeComponent";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/hook" element={<HookComponent />} />
-        <Route path="/timer" element={<Timer />} />
+        <Route path="/" element={<HomeComponent />}></Route>
+        <Route path="/video" element={<VideoComponent />}></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,112 @@
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.header{
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 150px;
+    background-color: grey;
+}
+
+.search{
+    width: 350px;
+    background-color: gray;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.signin{
+    width: 120px;
+    background-color: grey;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.sidebar{
+    width: 70px;
+    border: 1px solid black;
+}
+
+.videos{
+    flex: 1;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.video{
+    width: 450px;
+    height: 340px;
+    margin: 5px;
+    border: 1px solid black;
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnail{
+    width: 450px;
+    height: 200px;
+    background-color: grey;
+    padding: 5px;
+}
+
+.thumbnail > img{
+    width: 450px;
+    height: 200px;
+}
+
+.titlewrapper{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.channel{
+    height: 25px;
+    padding: 5px;
+    font-weight: 600;
+}
+
+.views{
+    height: 25px;
+    padding: 5px;
+}
+
+
+.channelphoto{
+    width: 50px;
+    border-radius: 25px;
+}
+
+.channelphoto > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.title{
+    flex: 1;
+    font-size: 20px;
+    font-weight: 400;
+    vertical-align: middle;
+}
