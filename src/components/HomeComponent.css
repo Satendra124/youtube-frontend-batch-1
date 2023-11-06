@@ -1,112 +1,151 @@
-.wrapper{
+.wrapper {
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
 }
 
-.header{
-    height: 150px;
+.header {
+    height: 70px;
     display: flex;
     flex-direction: row;
     border: 1px solid black;
+    position: sticky;
+    top: 0;
+    background-color: white;
     justify-content: space-between;
 }
 
-.logo{
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
     width: 150px;
-    background-color: grey;
-}
-
-.search{
-    width: 350px;
-    background-color: gray;
     margin: 5px;
-    border-radius: 10px;
 }
 
-.signin{
-    width: 120px;
-    background-color: grey;
-}
-
-.main{
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-}
-
-.sidebar{
-    width: 70px;
-    border: 1px solid black;
-}
-
-.videos{
-    flex: 1;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-.video{
+.search {
     width: 450px;
-    height: 340px;
+
+    margin: 6px;
+    display: flex;
+    flex-direction: row;
+}
+
+.signin {
+    width: 150px;
+    padding: 5px;
     margin: 5px;
+}
+
+.logoimage {
+    height: 60px;
+}
+
+.sidebar {
+    width: 200px;
     border: 1px solid black;
-    gap: 2px;
     display: flex;
     flex-direction: column;
 }
 
-.thumbnail{
-    width: 450px;
-    height: 200px;
-    background-color: grey;
-    padding: 5px;
+.sidebarItem {
+    height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1px;
+
 }
 
-.thumbnail > img{
-    width: 450px;
-    height: 200px;
+.videos {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.titlewrapper{
-    height: 50px;
+.video {
+    width: 350px;
+    height: 300px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.thumbnail {
+    flex: 5;
+}
+
+.thumbnailImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+
+}
+
+.titlewrapper {
+    flex: 1;
     display: flex;
     flex-direction: row;
 }
 
-.channel{
-    height: 25px;
-    padding: 5px;
-    font-weight: 600;
+.channelphoto {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
 }
 
-.views{
-    height: 25px;
-    padding: 5px;
-}
-
-
-.channelphoto{
-    width: 50px;
-    border-radius: 25px;
-}
-
-.channelphoto > img{
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-}
-
-.title{
+.title {
     flex: 1;
-    font-size: 20px;
-    font-weight: 400;
-    vertical-align: middle;
+    margin: 2px;
+}
+
+.channel {
+    flex: 1;
+    margin: 2px;
+    font-weight: bold;
+}
+
+.views {
+    flex: 1;
+}
+
+.searchInput {
+    background-color: rgb(240, 238, 238);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border: 1px solid rgb(176, 175, 175);
+    flex: 4;
+    padding-left: 15px;
+}
+
+.searchButton {
+    width: 150px;
+    flex: 1;
+    border: 1px solid rgb(176, 175, 175);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 5px;
+}
+
+.signInButton {
+    width: 80%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.channelImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
 }
