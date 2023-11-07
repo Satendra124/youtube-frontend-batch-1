@@ -1,18 +1,18 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 function VideoPreviewComponent(props) {
+  const title = props.title;
+  const description = props.description;
+  const url = props.url;
+  const views = props.views;
+  const channel = props.channel;
+  const uploadedAt = props.uploadedAt;
+  const id = props.id;
   return (
     <div className="video">
       <div className="thumbnail">
-        <Link to={'/video'}>
-          <img
-            alt="thumbnail"
-            src={
-              "https://i.ytimg.com/vi/SlPhMPnQ58k/mqdefault.jpg"
-            }
-            className="thumbnailImage"
-          />
+        <Link to={"/video/" + id}>
+          <img alt="thumbnail" src={url} className="thumbnailImage" />
         </Link>
-
       </div>
       <div className="titlewrapper">
         <div className="channelphoto">
@@ -25,13 +25,15 @@ function VideoPreviewComponent(props) {
           />
         </div>
         <div className="title">
-          This is a video Title for my video in youtube
-          <div className="channel">MrWhosTheBoss</div>
-          <div className="views">1.7M Views . 18 Hours Ago</div>
+          {title}
+          <div className="channel">{channel}</div>
+          <div className="views">
+            {views} Views . {uploadedAt}
+          </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default VideoPreviewComponent;

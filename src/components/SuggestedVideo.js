@@ -1,25 +1,28 @@
-function SuggestedVideo() {
-    return (
-      <>
-        <div className="suggested-video">
-          <div className="suggestion-image">
-            <img
-              src="https://i.ytimg.com/vi/SlPhMPnQ58k/mqdefault.jpg"
-              width={"230px"}
-            />
-          </div>
-          <div className="suggestion-content">
-            <div class="video-info">
-              <p class="video-sug-title">
-                Kalank Title Track - Lyrical | Alia Bhatt
-              </p>
-              <p class="margin-0 smaller-fontsize">T-Series</p>
-              <p class="margin-0 smaller-fontsize">230M views . 4 years ago</p>
-            </div>
+function SuggestedVideo(props) {
+  const title = props.title;
+  const description = props.description;
+  const url = props.url;
+  const views = props.views;
+  const channel = props.channel;
+  const uploadedAt = props.uploadedAt;
+  return (
+    <>
+      <div className="suggested-video">
+        <div className="suggestion-image">
+          <img src={url} width={"230px"} />
+        </div>
+        <div className="suggestion-content">
+          <div class="video-info">
+            <p class="video-sug-title">{title}</p>
+            <p class="margin-0 smaller-fontsize">{channel}</p>
+            <p class="margin-0 smaller-fontsize">
+              {views} views . {uploadedAt}
+            </p>
           </div>
         </div>
-      </>
-    );
-  }
+      </div>
+    </>
+  );
+}
 
-  export default SuggestedVideo;
+export default SuggestedVideo;

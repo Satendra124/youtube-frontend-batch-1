@@ -1,6 +1,8 @@
 import "./HomeComponent.css";
 import VideoPreviewComponent from "./VideoPreviewComponent";
 import HeaderComponent from "./Header";
+import videos from "./videos.json";
+
 function HomeComponent() {
   return (
     <div className="wrapper">
@@ -13,18 +15,24 @@ function HomeComponent() {
           <div className="sidebarItem">Liked Videos</div>
         </div>
         <div className="videos">
+          {videos.map(function (video) {
+            return (
+              <VideoPreviewComponent
+                title={video.title}
+                description={video.description}
+                url={video.thumbnail.url}
+                views={video.views}
+                channel={video.channelName}
+                uploadedAt={video.uploadedAt}
+                id={video.id}
+              />
+            );
+          })}
           <VideoPreviewComponent title="This is first video 1" />
-          <VideoPreviewComponent title="This is first video 2" />
-          <VideoPreviewComponent title="This is first video 3" />
-          <VideoPreviewComponent title="This is first video 4" />
-          <VideoPreviewComponent />
-          <VideoPreviewComponent />
-          <VideoPreviewComponent />
-          <VideoPreviewComponent />
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default HomeComponent;
